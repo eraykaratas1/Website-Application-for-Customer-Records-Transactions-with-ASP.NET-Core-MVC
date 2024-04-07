@@ -1,0 +1,59 @@
+﻿@using MusteriWebProject.Models
+@model List<CustomerC>
+
+@{
+    ViewData["Title"] = "Aranan Kayitlari Gosterme";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1 class="text-center">ARANAN MÜŞTERİLERİN KAYITLARI</h1>
+<br />
+<br />
+
+<table class="table table-bordered pr-5 text-white">
+
+    <tr>
+
+        <th class="text-center">CustKey</th>
+        <th class="text-center">Müşteri No</th>
+        <th class="text-center">Adı</th>
+        <th class="text-center">Soyadı</th>
+        <th class="text-center">Kaynak</th>
+        <th class="text-center">Kayıt Tarihi Başlangıcı</th>
+        <th class="text-center">Kayıt Tarihi Bitişi</th>
+        <th class="text-center">Kampanya</th>
+        <th class="text-center">Görüşme Sonucu</th>
+        <th class="text-center">Telefon No</th>
+        <th class="text-center">Arama Tarihi</th>
+        <th class="text-center">Temsilci</th>
+        <th class="text-center">Güncelle</th>
+        <th class="text-center">Sil</th>
+
+    </tr>
+
+    @foreach (var x in Model)
+    {
+        <tr>
+
+            <td>@x.CustKey</td>
+            <td>@x.MusteriNo</td>
+            <td>@x.Adı</td>
+            <td>@x.Soyadı</td>
+            <td>@x.Kaynak</td>
+            <td>@x.KayitTarihiBaslangici</td>
+            <td>@x.KayitTarihiBitisi</td>
+            <td>@x.Kampanya</td>
+            <td>@x.GorusmeSonucu</td>
+            <td>@x.TelefonNo</td>
+            <td>@x.AramaTarihi</td>
+            <td>@x.Temsilci</td>
+            <td><a href="/Home/UpdateRecord/@x.CustKey" class="btn btn-danger">Güncelle</a></td>
+            <td><a href="/Home/DeleteRecord/@x.CustKey" class="btn btn-success">Sil</a></td>
+
+        </tr>
+
+
+    }
+
+
+</table>

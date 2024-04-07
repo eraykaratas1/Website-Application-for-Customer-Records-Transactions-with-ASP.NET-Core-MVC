@@ -1,0 +1,62 @@
+﻿@model Admin
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Giris Ekrani</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" />
+</head>
+<body class="bg-secondary">
+
+    <br />
+
+    <h1 class ="text-center">YÖNETİM SİSTEMİ GİRİŞ PANELİ</h1>
+
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+
+    <div class="container">
+        <div class="row ">
+            <div class="col-md-10">
+                <form asp-action="LoginPage" asp-controller="Login" class="text-center" method="post">
+                    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+                    <div class="form-group row">
+                        <label asp-for="AdminAd" class="col-sm-2 col-form-label font-weight-bold mt-2">Admin Adı:</label>
+                        <div class="col-sm-10 mt-2">
+                            <input asp-for="AdminAd" class="form-control" />
+                            <span asp-validation-for="AdminAd" class="text-danger"></span>
+                        </div>
+                    </div>
+                    <br />
+                    <br />
+                    <div class="form-group row">
+                        <label asp-for="Sifre" class="col-sm-2 col-form-label font-weight-bold mt-2">Şifre:</label>
+                        <div class="col-sm-10 mt-2">
+                            <input asp-for="Sifre" type="password" class="form-control" />
+                            <span asp-validation-for="Sifre" class="text-danger"></span>
+                        </div>
+                    </div>
+                    <br />
+                    <div class="form-group row">
+                        <div class="offset-sm-2 col-sm-10">
+                            <button type="submit" class="btn btn-danger">Giriş Yap</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

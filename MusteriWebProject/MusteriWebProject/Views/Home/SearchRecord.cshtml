@@ -1,0 +1,38 @@
+﻿@model MusteriWebProject.Models.CustomerC
+
+@{
+    ViewData["Title"] = "Kayit Arama";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1 class="text-center">MÜŞTERİ KAYIT ARAMA</h1>
+
+<form asp-controller="Home" asp-action="ListSearchRecord">
+    <label asp-for="MusteriNo"></label>
+    <input asp-for="MusteriNo" class="form-control" />
+
+    <label asp-for="Adı"></label>
+    <input asp-for="Adı" class="form-control" />
+
+    <label asp-for="Soyadı"></label>
+    <input asp-for="Soyadı" class="form-control" />
+
+    <label asp-for="Kaynak"></label>
+    <input asp-for="Kaynak" class="form-control" />
+
+    <label asp-for="KayitTarihiBaslangici"></label>
+    <input asp-for="KayitTarihiBaslangici" class="form-control" />
+
+    <label asp-for="KayitTarihiBitisi"></label>
+    <input asp-for="KayitTarihiBitisi" class="form-control" />
+
+    <label asp-for="Kampanya"></label>
+    <select asp-for="Kampanya" asp-items="(List<SelectListItem>)ViewBag.dgr" class="form-control"></select>
+
+    <br />
+
+    <div class="text-center">
+        <button type="submit" class="btn btn-primary">Girilen Kayıdı Listele</button>
+    </div>
+</form>
+

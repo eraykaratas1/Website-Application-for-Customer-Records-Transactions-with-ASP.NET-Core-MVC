@@ -1,0 +1,52 @@
+﻿@model MusteriWebProject.Models.CustomerC
+@{
+    ViewData["Title"] = "Kayit Guncelleme";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<form asp-controller="Home" asp-action="UpdateRecord" method="post" class="form-group">
+    <h1 class="text-center">Müşteri Kayıt Güncelle</h1>
+    <br />
+
+    <label asp-for="CustKey"></label>
+    <input asp-for="CustKey" class="form-control" />
+
+    <label asp-for="MusteriNo"></label>
+    <input asp-for="MusteriNo" class="form-control" />
+
+    <label asp-for="Adı"></label>
+    <input asp-for="Adı" class="form-control" />
+
+    <label asp-for="Soyadı"></label>
+    <input asp-for="Soyadı" class="form-control" />
+
+    <label asp-for="Kaynak"></label>
+    <input asp-for="Kaynak" class="form-control" />
+
+    <label asp-for="KayitTarihiBaslangici"></label>
+    <input asp-for="KayitTarihiBaslangici" class="form-control" />
+
+    <label asp-for="KayitTarihiBitisi"></label>
+    <input asp-for="KayitTarihiBitisi" class="form-control" />
+
+    <label asp-for="Kampanya"></label>
+    <input asp-for="Kampanya" class="form-control" />
+
+    <label asp-for="GorusmeSonucu"></label>
+    <input asp-for="GorusmeSonucu" class="form-control" />
+
+    <label asp-for="TelefonNo"></label>
+    <input asp-for="TelefonNo" class="form-control" />
+
+    <label asp-for="AramaTarihi"></label>
+    <input asp-for="AramaTarihi" class="form-control" />
+
+    <label asp-for="Temsilci"></label>
+    <input asp-for="Temsilci" class="form-control" />
+
+    <br />
+
+    <div class="text-center">
+        <button type="submit" class="btn btn-primary">Kayıt Güncelle</button>
+    </div>
+</form>
